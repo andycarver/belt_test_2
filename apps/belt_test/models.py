@@ -36,8 +36,8 @@ class QuoteManager(models.Manager):
             errors.append('Quoted by must be at least 3 characters.')
         if not request.POST['message']:
             errors.append('Message cannot be blank.')
-        if len(request.POST['message']) < 3:
-            errors.append('Message must be at least 3 characters.')
+        if len(request.POST['message']) < 10:
+            errors.append('Message must be at least 10 characters.')
 
         return errors
 # Create your models here.
